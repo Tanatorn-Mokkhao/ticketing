@@ -5,8 +5,10 @@ import Header from "../component/header";
 const AppComponent = ({ Component, pageProps, currentUser }) => {
   return (
     <div>
-      <Header currentUser={currentUser}/>
-      <Component {...pageProps} />
+      <Header currentUser={currentUser} />
+      <div className="container">
+        <Component currentUser={currentUser} {...pageProps} />
+        </div>
     </div>
   );
 };
@@ -16,8 +18,9 @@ AppComponent.getInitialProps = async (appContext) => {
   const { data } = await client.get("/api/users/currentuser");
   let pageProps = {};
 
+  // check child copnent have get inital prop if have call it 
   if (appContext.Component.getInitialProps) {
-    pageProps = await appContext.Component.getInitialProps(appContext.ctx);
+    pageProps = await appContext.Component.getInitialProps(appContext.ctx, client, data.currentUser);
   }
 
   return {
