@@ -13,7 +13,8 @@ app.use(express.json())
 app.use(
     cookieSession({
         signed: false,
-        secure: process.env.NODE_ENV !== 'test' // if we are running mpn run test it will defined with test then return false
+        // secure: process.env.NODE_ENV !== 'test' // if we are running mpn run test it will defined with test then return false
+        secure: false
     })
 )
 
