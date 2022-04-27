@@ -5,7 +5,7 @@ export default ({ req }) => {
         //we are on servcer
         //requests should be mad to http://SERVICENAME.NAMESPACE.svc.cluster.local
         return axios.create({
-            baseURL: "wwww.tanatorn.com",
+            baseURL: "http://wwww.tanatorn.com",
             headers: req.headers
         })
       } else {
