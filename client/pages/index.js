@@ -20,7 +20,7 @@ const LandingPage = ({ currentUser, tickets }) => {
     // return currentUser ? <h1>You are signed in</h1> : <h1>You are not sign in</h1>
     return (
         <div>
-            <h1>Tickets</h1>
+            <h2>Tickets</h2>
             <table className="table">
                 <thead>
                     <tr>
