@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: auth
-          image: predatormart/auth
+          image: us.gcr.io/ticket-dev-346309/auth
           env:
             - name: MONGO_URI
               value: "mongodb://auth-mongo-srv:27017/auth"
