@@ -4,6 +4,7 @@ export default ({ req }) => {
     if (typeof window === "undefined") {
         //we are on servcer
         //requests should be mad to http://SERVICENAME.NAMESPACE.svc.cluster.local
+        // baseURL: "http://ingress-nginx-controller.ingress-nginx.svc.cluster.local",
         return axios.create({
             baseURL: "http://wwww.tanatorn.com",
             headers: req.headers
