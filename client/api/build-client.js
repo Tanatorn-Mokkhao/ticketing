@@ -6,7 +6,7 @@ export default ({ req }) => {
         //requests should be mad to http://SERVICENAME.NAMESPACE.svc.cluster.local
         // baseURL: "http://ingress-nginx-controller.ingress-nginx.svc.cluster.local",
         return axios.create({
-            baseURL: "http://wwww.tanatorn.com",
+            baseURL: "http://www.tanatorn.com",
             headers: req.headers
         })
       } else {
